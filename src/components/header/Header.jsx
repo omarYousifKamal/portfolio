@@ -7,7 +7,7 @@ const Header = () =>
             <nav className='nav container'>
                 <a href='index.html' className='nav__logo'>Smith</a>
                 <div className='nav__menu'>
-                    <ul className="nav__list grid"></ul>
+                    <ul className="nav__list grid">
                     <li className="nav__item">
                         <a href="#home" className="nav__link">
                             <i className='uil uil-estate nav-icon'></i>
@@ -45,6 +45,13 @@ const Header = () =>
                             Contact
                         </a>
                     </li>
+                    </ul>
+
+                    <i className='uil uil-times nav__close'></i>
+                </div>
+
+                <div className="nav__toggle">
+                    <i class="uil uil-apps" ></i>   
                 </div>
             </nav>
             </header>
