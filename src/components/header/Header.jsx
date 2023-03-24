@@ -1,12 +1,16 @@
-import React from 'react';
+import React , {useState} from 'react';
 import "./header.css"
 const Header = () => 
 {
+    /*=============== Toggle Menu ===============*/
+
+    const [Toggle, showMenu] = useState(false);
     return (
         <header className='header'>
             <nav className='nav container'>
                 <a href='index.html' className='nav__logo'>Smith</a>
-                <div className='nav__menu'>
+
+                <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
                     <ul className="nav__list grid">
                     <li className="nav__item">
                         <a href="#home" className="nav__link" active-link>
@@ -47,10 +51,10 @@ const Header = () =>
                     </li>
                     </ul>
 
-                    <i className='uil uil-times nav__close'></i>
+                    <i className='uil uil-times nav__close' onClick={() => showMenu(!Toggle)}></i>
                 </div>
 
-                <div className="nav__toggle">
+                <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
                     <i class="uil uil-apps" ></i>   
                 </div>
             </nav>
